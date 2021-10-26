@@ -1,3 +1,4 @@
+
 # import urllib library
 from urllib.request import urlopen
 
@@ -5,9 +6,12 @@ from urllib.request import urlopen
 import json
 
 # store the URL in url as parameter for urlopen
-# replace APIkey with full api key from ipgolocation.com
-IP = '8.8.8.8'
-url = 'https://api.ipgeolocation.io/ipgeo?apiKey=APIkey&ip=' + IP
+
+key = X  # replace X with api key from ipgolocation.com
+prompt = "Enter an IP: "
+IP = input(prompt)
+
+url = 'https://api.ipgeolocation.io/ipgeo?apiKey=' + key + '&ip=' + IP
 
 # store the response of URL
 response = urlopen(url)
